@@ -26,9 +26,9 @@ begin
     _con := TdSQLdbConnector.Create(nil);
     //_con.Logger.Active := True;
     //_con.Logger.FileName := 'OUTPUT.LOG';
-    _con.User:= INI.ReadString('DB','UserName', 'test_user');
-    _con.Password:= INI.ReadString('DB','Password', '');
-    _con.Database:= INI.ReadString('DB','DatabaseName', 'test');
+    _con.User:= INI.ReadString('DB','UserName', 'larispos');
+    _con.Password:= INI.ReadString('DB','Password', 'larispos');
+    _con.Database:= INI.ReadString('DB','DatabaseName', 'larispos');
     _con.Host:= INI.ReadString('DB','HostName', '127.0.0.1');
 
     LibLoad:= TSQLDBLibraryLoader.Create(nil);
