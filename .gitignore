@@ -1,0 +1,10 @@
+# directory
+backup/
+lib/
+
+# executable file
+*.exe
+larisPOS
+
+# session file
+*.lps
