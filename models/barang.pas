@@ -4,6 +4,9 @@ unit barang;
 
 interface
 
+uses
+  dOpf, dSQLdbBroker;
+
 type
 
   { TBarang }
@@ -42,6 +45,8 @@ type
     property Min_Stok: integer read FMinStok write FMinStok;
     property Max_Stok: integer read FMaxStok write FMaxStok;
   end;
+
+  TPBarang = specialize TdGSQLdbEntityOpf<TBarang>;
 
 implementation
 
