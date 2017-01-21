@@ -14,7 +14,7 @@ object FrmUtama: TFrmUtama
   WindowState = wsMaximized
   object Page: TPageControl
     Left = 0
-    Height = 391
+    Height = 418
     Top = 0
     Width = 568
     Align = alClient
