@@ -1,10 +1,16 @@
 # directory
-backup/
 lib/
 
 # executable file
 *.exe
 larisPOS
+postest
 
-# session file
+# other file
 *.lps
+*.o
+*.or
+*.ppu
+*.bak
+*.compiled
+*.ini
