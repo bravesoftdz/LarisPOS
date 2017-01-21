@@ -3,7 +3,7 @@ program postest;
 {$mode objfpc}{$H+}
 
 uses
-  Interfaces, Forms, GuiTestRunner, fpcunittestrunner, testinsertbarang;
+  Interfaces, Forms, GuiTestRunner, fpcunittestrunner, testbarang;
 
 {$R *.res}
 
