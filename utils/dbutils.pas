@@ -30,11 +30,13 @@ begin
     _con.Password:= INI.ReadString('DB','Password', 'larispos');
     _con.Database:= INI.ReadString('DB','DatabaseName', 'larispos');
     _con.Host:= INI.ReadString('DB','HostName', '127.0.0.1');
+    _con.ConnectorType:=INI.ReadString('DB','ConnectionType', 'MySQL 5.6');
 
     LibLoad:= TSQLDBLibraryLoader.Create(nil);
-    LibLoad.ConnectionType:= INI.ReadString('DB','ConnectionType', 'MySQL 5.6');
+    LibLoad.ConnectionType:= _con.ConnectorType;
     LibLoad.LibraryName:= INI.ReadString('DB', 'LibraryName', '/opt/lampp/lib/libmysqlclient.so.18.0.0');
     LibLoad.LoadLibrary;
+    Result:=_con;
   end;
 end;
 
