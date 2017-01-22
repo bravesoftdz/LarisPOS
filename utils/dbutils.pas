@@ -32,7 +32,7 @@ begin
   LibLoad.ConnectionType:= _con.ConnectorType;
   LibLoad.LibraryName:= INI.ReadString('DB', 'LibraryName', '/opt/lampp/lib/libmysqlclient.so.18.0.0');
   LibLoad.LoadLibrary;
-
+  INI.Free;
   Result:=_con;
 end;
 
