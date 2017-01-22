@@ -6,6 +6,7 @@ interface
 
 uses
   dOpf, dSQLdbBroker;
+
 type
   TKategori = class
   private
@@ -15,6 +16,8 @@ type
     property Id: string read FId write FId;
     property Kategori: string read FKategori write FKategori;
   end;
+
+  TPKategori = specialize TdGSQLdbEntityOpf<TKategori>;
 
 implementation
 
