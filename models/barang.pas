@@ -5,7 +5,7 @@ unit barang;
 interface
 
 uses
-  dOpf, dSQLdbBroker;
+  dOpf, dSQLdbBroker, kategori;
 
 type
 
@@ -28,6 +28,9 @@ type
     FStok: integer;
     FMinStok: integer;
     FMaxStok: integer;
+    FSupplier: string;
+  public
+    function GetKategori(AKategori: TPKategori): TKategori;
   published
     property Id: string read FId write FId;
     property Kategori_id: string read FIdKategori write FIdKategori;
@@ -44,11 +47,21 @@ type
     property Stok: integer read FStok write FStok;
     property Min_Stok: integer read FMinStok write FMinStok;
     property Max_Stok: integer read FMaxStok write FMaxStok;
+    property Supplier: string read FSupplier write FSupplier;
   end;
 
   TPBarang = specialize TdGSQLdbEntityOpf<TBarang>;
 
 implementation
+
+{ TBarang }
+
+function TBarang.GetKategori(AKategori: TPKategori): TKategori;
+begin
+  AKategori.Entity.Id := FIdKategori;
+  AKategori.Find('id = :id');
+  Result := AKategori.Entity;
+end;
 
 end.
 
