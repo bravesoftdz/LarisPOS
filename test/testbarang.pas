@@ -17,8 +17,6 @@ type
     procedure SetUp; override;
     procedure TearDown; override;
   public
-    i: TBarang;
-    barangs: TPBarang.TEntities;
     FBarang: TPBarang;
     conn: TdSQLdbConnector;
   published
@@ -90,12 +88,10 @@ procedure TTestCaseBarang.SetUp;
 begin
   conn := dbutils.con;
   FBarang := TPBarang.Create(conn, 'barang');
-  barangs := TPBarang.TEntities.Create;
 end;
 
 procedure TTestCaseBarang.TearDown;
 begin
-  barangs.Free;
   FBarang.Free;
   conn.Free;
 end;
