@@ -5,7 +5,7 @@ unit testbarang;
 interface
 
 uses
-  Classes, SysUtils, fpcunit, testutils, testregistry, dbutils, barang,
+  Classes, SysUtils, fpcunit, testutils, testregistry, dbutils, model,
   dOpf, dSQLdbBroker;
 
 type
