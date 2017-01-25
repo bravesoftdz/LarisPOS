@@ -5,7 +5,7 @@ unit dbutils;
 interface
 
 uses
-  dSQLdbBroker, SysUtils, sqldblib, IniFiles, mysql56conn;
+  dSQLdbBroker, SysUtils, sqldblib, IniFiles, mysql56conn, mysql57conn;
 
 function con: TdSQLdbConnector;
 
