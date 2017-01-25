@@ -15,3 +15,4 @@ postest
 *.bak
 *.compiled
 *.ini
+*.obj
